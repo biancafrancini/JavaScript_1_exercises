@@ -10,13 +10,10 @@ function calculateSalary(role) {
         break;
   
       case "manager":
+        case "cto":
         return 1800;
         break;
-  
-      case "cto":
-        return 1800;
-        break;
-  
+
       case "developer":
         return 1500;
         break;
