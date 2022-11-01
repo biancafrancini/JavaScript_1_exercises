@@ -14,7 +14,7 @@ console.log(person1);
 console.log(person2);
 
 //English - Why?:
-//const person2 = person1 is like pointing both consts to the same container/storage space. 
+//const person2 = person1 is like pointing both consts at the same container/storage space. 
 //This means that we will not have a real new variable, but just a new reference to an already existing container/variable.
 //However, if we created a real copy of the first variable (const person1), calling it const person2 and using Object.assign() method to get the same value and properties' name of const person1,
 //we will be able to create a new container/storage space without being a reference to the same person1's container, like a new and different container of values
