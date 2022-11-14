@@ -1,14 +1,12 @@
 function uncompletedNotes(notes) {
   let newTodosArray = [];
-  notes.forEach((obj) =>
-    obj.todos.filter((element) => {
-      if (element.done === false) {
-        return newTodosArray.push(element);
-      }
-    })
-  );
+  notes.forEach((obj) => {
+    let uncompleteTodos = obj.todos.filter((element) => element.done === false);
+    newTodosArray.push(uncompleteTodos);
+  });
   console.log(newTodosArray);
 }
+
 
 const notes = [
   {
