@@ -1,20 +1,28 @@
-// Solution One:
 function adultFilter(persons) {
-  let newArrayPersons = persons.filter((element) => element.age >= 18);
+  return persons.filter((person) => person.age >= 18);
+}
+
+/** Solution Two:
+function adultFilter2(persons){
+  let newArrayPersons = [];
+  persons.forEach((person) => {
+    if(person.age >= 18){
+      newArrayPersons.push(person);
+    }
+  });
   return newArrayPersons;
 }
 
-/** Solution Two - using map():
-function adultFilter(persons) {
-  let adultPersons = persons.map((element) => {
-    if (element.age >= 18) {
-      return element;
+* Solution Three:
+function adultFilter3(persons) {
+  let adultPersons = persons.map((person) => {
+    if (person.age >= 18) {
+      return person;
     }
   });
-  let newArrayPersons = adultPersons.filter((element) => element !== undefined);
+  let newArrayPersons = adultPersons.filter((person) => element !== undefined);
   return newArrayPersons;
- }; 
-} */
+ }; */
 
 const persons = [
   { name: "Paul", age: 16 },
@@ -32,3 +40,15 @@ const persons = [
 const adults = adultFilter(persons);
 console.log(persons);
 console.log(adults);
+
+/** console.time()
+adultFilter(persons)
+console.timeEnd()
+
+console.time()
+adultFilter2(persons)
+console.timeEnd()
+
+console.time()
+adultFilter3(persons)
+console.timeEnd()*/
