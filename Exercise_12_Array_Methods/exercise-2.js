@@ -1,7 +1,6 @@
 function nicknameMap(persons) {
-  let newArrayPeople = persons.map((element) => element.name + "-" + element.age);
-  return newArrayPeople;
-};
+  return persons.map((element) => element.name + "-" + element.age);
+}
 
 const persons = [
   { name: "Paul", age: 16 },
